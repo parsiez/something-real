@@ -20,7 +20,6 @@
             position: relative;
         }
 
-        /* --- Ana Işık Efektleri --- */
         body::before {
             content: '';
             position: absolute;
@@ -29,7 +28,6 @@
             z-index: 1;
         }
 
-        /* --- Kenar Süslemeleri --- */
         .art-nouveau-border {
             position: fixed;
             top: 0;
@@ -50,7 +48,6 @@
             overflow: visible;
         }
 
-        /* Animasyonlar */
         .vine-wrapper {
             transform-box: fill-box;
             transform-origin: bottom center;
@@ -80,7 +77,6 @@
             }
         }
 
-        /* --- Merkez İçerik Alanı --- */
         .content-container {
             position: relative;
             z-index: 10;
@@ -89,7 +85,7 @@
             align-items: center;
             width: 90%;
             max-width: 800px;
-            height: 85vh; /* Ekranın %85'ini kaplasın */
+            height: 85vh;
         }
 
         .page-title {
@@ -103,20 +99,18 @@
             animation: neonTitleFlicker 5s infinite alternate;
         }
 
-        /* --- YAZI KUTUSU (Senin kullanacağın alan) --- */
         .text-box {
-            background: rgba(15, 0, 0, 0.65); /* Yarı saydam siyah/kırmızı arka plan */
+            background: rgba(15, 0, 0, 0.65);
             border: 1px solid rgba(255, 0, 0, 0.3);
             border-radius: 15px;
             padding: 4vmin;
             width: 100%;
             flex-grow: 1;
-            overflow-y: auto; /* Yazı uzarsa kaydırma çubuğu çıkar */
+            overflow-y: auto;
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.15), inset 0 0 20px rgba(255, 0, 0, 0.1);
             backdrop-filter: blur(5px);
         }
 
-        /* Kırmızı Kaydırma Çubuğu (Scrollbar) Tasarımı */
         .text-box::-webkit-scrollbar {
             width: 8px;
         }
@@ -132,19 +126,17 @@
             background: rgba(255, 0, 0, 0.7); 
         }
 
-        /* --- PARAGRAF TASARIMI --- */
         .text-box p {
-            font-size: 1.8vmin; /* Okunaklı font boyutu */
-            line-height: 1.8; /* Satır arası boşluk */
+            font-size: 1.8vmin;
+            line-height: 1.8;
             color: #ffcccc;
-            margin-bottom: 2.5vmin; /* Paragraflar arası boşluk */
+            margin-bottom: 2.5vmin;
             font-weight: 300;
             letter-spacing: 0.05rem;
             text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
-            text-align: justify; /* Yazıları iki yana yasla */
+            text-align: justify;
         }
 
-        /* --- GERİ DÖN BUTONU --- */
         .btn-back {
             margin-top: 4vmin;
             padding: 1.2vmin 3.5vmin;
@@ -169,7 +161,6 @@
             text-shadow: 0 0 8px #fff;
         }
 
-        /* --- Yaprak Yağmuru --- */
         #flower-canvas {
             position: fixed;
             top: 0; left: 0;
@@ -179,7 +170,6 @@
             filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.6));
         }
 
-        /* Mobil Uyumluluk */
         @media (max-width: 768px) {
             .art-nouveau-border { width: 22vw; }
             .content-container { height: 80vh; width: 95%; }
@@ -192,7 +182,6 @@
 </head>
 <body>
 
-    <!-- Kırmızı Örümcek Zambakları (Tokyo Ghoul Vibes) -->
     <div class="art-nouveau-border border-left">
         <svg viewBox="0 0 100 800" preserveAspectRatio="xMidYMid slice">
             <g class="vine-wrapper">
@@ -281,17 +270,10 @@
 
     <canvas id="flower-canvas"></canvas>
 
-    <!-- Ana İçerik -->
     <div class="content-container">
         <h1 class="page-title">İçimden Geçenler</h1>
         
-        <!-- YAZI KUTUSU BAŞLANGICI -->
         <div class="text-box">
-            
-            <!-- ========================================== -->
-            <!-- !!! ALEYNA'YA YAZACAKLARINI BURAYA YAZ !!! -->
-            <!-- ========================================== -->
-            <!-- Her yeni paragraf için yazını <p> ve </p> etiketleri arasına al. -->
 
             <p>Sesindeki eğlenebilme duygusunu hissetigim günden beri tutuldum sana, belki çok kötü hatalar yaptim gecmiste ama artik kendimi yeterince terbiye ettim, büyüdüm. Şimdi belki aramiz biraz bozuk, sorunlara sahibiz ikimizde ama hepsini atlatabilecegimizi düsnüyorum. Eğer gerçekten de sevebileceksek birbirimizi mezara dek birak hayati dinimi bile adarim sana kadin, bazen mesafeler sikinti cikarabiliyor, bazen koklamak, sarilabilmek istersin karsindakine asilmayacak seyler degil bence bunlar mesafeyi kirabilecegimiz dönemlerde olur.   </p>
 
@@ -299,12 +281,7 @@
 
             <p>Sesli konusurken bile bazen öpmemden bile utaniyorsun ya utanmani bile cok seviyorum, her seyinle cok tatli buluyorum seni isirasim geliyo yanaklarinii. Bu aralar streslisin, sikintilarin var farkindayim saygi duyuyorum ama kendini bu kadar yorma, üzme, stres yapma, cünkü sen kendin kimseden daha değerli değilsin, kendine değer ver, ne zaman istersen de yaninda olurum, istemesen de anlayis gösterir bekleyebilirim seni yillarca. Seni çok seviyorum Aleyna nolur cok uzaklara gitme..</p>
 
-            <!-- ========================================== -->
-            <!-- !!! YAZIN BURADA BİTECEK !!!               -->
-            <!-- ========================================== -->
-
         </div>
-        <!-- YAZI KUTUSU BİTİŞİ -->
 
         <a href="index.html" class="btn-back">Geri Dön</a>
     </div>
